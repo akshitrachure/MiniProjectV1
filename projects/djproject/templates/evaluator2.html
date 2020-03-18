@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+   
+<div class="container">
+        <center><h1>Evaluator 2</h1></center>
+  <form method="POST">
+        {% csrf_token %}
+        <b>1. </b>
+        <div class="form-group row">
+                <div class="col-xs-1">
+                    <label for="ex1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A</label>
+                    <input class="form-control" id="ex1" type="text" value="0" maxlength="2" max="20">
+                </div>
+                <div class="col-xs-1">
+                    <label for="ex2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B</label>
+                    <input class="form-control" id="ex2" type="text" value="0" maxlength="2" max="20">
+                </div>
+                <div class="col-xs-1">
+                    <label for="ex3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C</label>
+                    <input class="form-control" id="ex3" type="text" value="0" maxlength="2" max="20">
+                </div>
+                <div class="col-xs-1">
+                    <label for="ex4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D</label>
+                    <input class="form-control" id="ex4" type="text" value="0" maxlength="2" max="20">
+                </div>
+                <div class="col-xs-1">
+                    <label for="total1">Total</label>
+                    <input class="form-control" id="total1" type="text" value="0" maxlength="2" max="20">
+                </div>
+        </div>
+        <b>2. </b>
+        <div class="form-group row">
+            <div class="col-xs-1">
+                <label for="ex1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A</label>
+                <input class="form-control" id="ex1" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B</label>
+                <input class="form-control" id="ex2" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C</label>
+                <input class="form-control" id="ex3" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D</label>
+                <input class="form-control" id="ex4" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="total2">Total</label>
+                <input class="form-control" id="total2" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="maxtotal1">MaxTotal</label>
+                <input class="form-control" id="maxtotal1" type="text" value="0" maxlength="2" max="20">
+            </div>
+        </div>
+        <b>3. </b>
+        <div class="form-group row">
+            <div class="col-xs-1">
+                <label for="ex1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A</label>
+                <input class="form-control" id="ex1" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B</label>
+                <input class="form-control" id="ex2" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C</label>
+                <input class="form-control" id="ex3" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D</label>
+                <input class="form-control" id="ex4" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="total3">Total</label>
+                <input class="form-control" id="total3" type="text" value="0" maxlength="2" max="20">
+            </div>
+        </div>
+        <b>4. </b>
+        <div class="form-group row">
+            <div class="col-xs-1">
+                <label for="ex1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A</label>
+                <input class="form-control" id="ex1" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B</label>
+                <input class="form-control" id="ex2" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C</label>
+                <input class="form-control" id="ex3" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D</label>
+                <input class="form-control" id="ex4" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="total4">Total</label>
+                <input class="form-control" id="total4" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="maxtotal2">MaxTotal</label>
+                <input class="form-control" id="maxtotal2" type="text" value="0" maxlength="2" max="20">
+            </div>
+        </div>
+        <b>5. </b>
+        <div class="form-group row">
+            <div class="col-xs-1">
+                <label for="ex1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A</label>
+                <input class="form-control" id="ex1" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B</label>
+                <input class="form-control" id="ex2" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C</label>
+                <input class="form-control" id="ex3" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D</label>
+                <input class="form-control" id="ex4" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="total5">Total</label>
+                <input class="form-control" id="total5" type="text" value="0" maxlength="2" max="20">
+            </div>
+        </div>
+        <b>6. </b>
+        <div class="form-group row">
+            <div class="col-xs-1">
+                <label for="ex1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A</label>
+                <input class="form-control" id="ex1" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B</label>
+                <input class="form-control" id="ex2" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C</label>
+                <input class="form-control" id="ex3" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D</label>
+                <input class="form-control" id="ex4" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="total6">Total</label>
+                <input class="form-control" id="total6" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="maxtotal3">MaxTotal</label>
+                <input class="form-control" id="maxtotal3" type="text" value="0" maxlength="2" max="20">
+            </div>
+        </div>
+        <b>7. </b>
+        <div class="form-group row">
+            <div class="col-xs-1">
+                <label for="ex1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A</label>
+                <input class="form-control" id="ex1" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B</label>
+                <input class="form-control" id="ex2" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C</label>
+                <input class="form-control" id="ex3" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D</label>
+                <input class="form-control" id="ex4" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="total7">Total</label>
+                <input class="form-control" id="total7" type="text" value="0" maxlength="2" max="20">
+            </div>
+        </div>
+        <b>8. </b>
+        <div class="form-group row">
+            <div class="col-xs-1">
+                <label for="ex1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A</label>
+                <input class="form-control" id="ex1" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B</label>
+                <input class="form-control" id="ex2" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C</label>
+                <input class="form-control" id="ex3" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D</label>
+                <input class="form-control" id="ex4" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="total8">Total</label>
+                <input class="form-control" id="total8" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="maxtotal4">MaxTotal</label>
+                <input class="form-control" id="maxtotal4" type="text" value="0" maxlength="2" max="20">
+            </div>
+        </div>
+        <b>9. </b>
+        <div class="form-group row">
+            <div class="col-xs-1">
+                <label for="ex1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A</label>
+                <input class="form-control" id="ex1" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B</label>
+                <input class="form-control" id="ex2" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C</label>
+                <input class="form-control" id="ex3" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D</label>
+                <input class="form-control" id="ex4" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="total9">Total</label>
+                <input class="form-control" id="total9" type="text" value="0" maxlength="2" max="20">
+            </div>
+        </div>
+        <b>10. </b>
+         <div class="form-group row">
+            <div class="col-xs-1">
+                <label for="ex1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A</label>
+                <input class="form-control" id="ex1" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B</label>
+                <input class="form-control" id="ex2" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C</label>
+                <input class="form-control" id="ex3" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="ex4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D</label>
+                <input class="form-control" id="ex4" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="total10">Total</label>
+                <input class="form-control" id="total10" type="text" value="0" maxlength="2" max="20">
+            </div>
+            <div class="col-xs-1">
+                <label for="maxtotal5">MaxTotal</label>
+                <input class="form-control" id="maxtotal5" type="text" value="0" maxlength="2" max="20">
+            </div>
+        </div>      
+           
+
+  </form>
+</div>
+
+</body>
+</html>

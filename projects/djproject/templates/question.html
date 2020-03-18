@@ -1,0 +1,172 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Question Paper</title>
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    /> -->
+
+    <!-- jQuery library -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <script>
+      console.log("Form is not sending");
+      $(document).ready(function(event) {
+        event.preventDefault;
+        // $("form").on("submit", function(event) {
+        //   console.log("Form sent");
+        //   $.ajax({
+        //     data: {
+        //       semester: $("#semester").val(),
+        //       branch: $("branch").val()
+        //     },
+        //     type: "POST",
+        //     url: "/process"
+        //   }).done(function(data) {
+        //     $("#output")
+        //       .text(data.output)
+        //       .show();
+        //   });
+        // event.preventDefault();
+      });
+      //});
+      //   var examform = $(".form-question-ajax");
+      //   examform.submit(function(event) {
+      //     // event.preventDefault();
+      //     console.log("Form is not sending");
+      //     var thisForm = $(this);
+      //     var actionEndpoint = thisForm.attr("action");
+      //     var httpMethod = thisForm.attr("method");
+      //     var formData = thisForm.serialize();
+
+      //     $.ajax({
+      //       url: actionEndpoint,
+      //       method: httpMethod,
+      //       data: formData,
+      //       success: function(data) {
+      //         console.log("success");
+      //         console.log(data);
+      //       },
+      //       error: function(errorData) {
+      //         console.log("error");
+      //         console.log(errorData);
+      //       }
+      //     });
+      //   });
+      // });
+    </script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">Home</a>
+    </nav>
+
+    <div></div>
+
+    <center>
+      <br /><br />
+      <div class="container">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            <p class="h2 text-uppercase mb- text-center text-info">
+              Question Paper
+            </p>
+
+            <br />
+            <form method="POST" class="form-question-ajax">
+              {% csrf_token %}
+              <div class="form-group">
+                Branch Name :
+                <!-- <select name="branch" id="branch" required>
+                  <option value="Computer Science and Engineering"
+                    >Computer Science and Engineering</option
+                  >
+                  <option value="Information Science and Engineering"
+                    >Information Science and Engineering</option
+                  >
+                </select> -->
+                <select name="branch" id="branch" required>
+                  {% for element in data %}
+                  <option value="{{ element.branch }}"
+                    >"{{ element.branch }}"</option
+                  >
+                  {% endfor %}
+                </select>
+              </div>
+              <br />
+              <div class="form-group">
+                Semester :
+                <select name="semester" id="semester" required>
+                  <option value="I">I</option>
+                  <option value="II">II</option>
+                  <option value="III">III</option>
+                  <option value="IV">IV</option>
+                  <option value="V">V</option>
+                  <option value="VI">VI</option>
+                  <option value="VII">VII</option>
+                  <option value="VIII">VIII</option>
+                </select>
+              </div>
+              <br />
+
+              <div class="form-group">
+                Subject ID :
+                <!-- <select name="branch" id="branch" required>
+                  <option value="ACC">ACC</option>
+                  <option value="FCP">FCP</option>
+                  <option value="DS">DS</option>
+                  <option value="OOPS">OOPS</option>
+                  <option value="OS">OS</option>
+                  <option value="SE">SE</option>
+                  <option value="CNS">CNS</option>
+                  <option value="ANN">ANN</option>
+                </select> -->
+                <select name="sub_id">
+                  {% for element in data %}
+                  <!-- {% if element.branch %} {% if
+                  element.semester %} -->
+                  <option value="{{ element.sub_id }}"
+                    >"{{ element.sub_name }}"</option
+                  >
+                  <!-- {% endif %} -->
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="form-group">
+                <!-- <a
+                  class="btn btn-primary"
+                  type="submit"
+                  name="submit"
+                  id="submit"
+                  value="submit"
+                  href="{% url 'questionpaper' %}"
+                > -->
+
+                <!-- Create -->
+                <!-- </a> -->
+                <input class="btn btn-primary" type="submit" name="submit" />
+              </div>
+            </form>
+          </div>
+          <div class="col"></div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </center>
+  </body>
+</html> -->
