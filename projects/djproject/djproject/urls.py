@@ -31,6 +31,5 @@ urlpatterns = [
     path('thankyou/', thankyou, name="thankyou"),
     # path('selectsubject/', selectsubject, name="selectsubject"),
     path('eval1/', eval1, name="eval1"),
-    path('eval2/', eval2, name="eval2"),
-
+    path('eval3/', eval3, name="eval3"),
 ]
