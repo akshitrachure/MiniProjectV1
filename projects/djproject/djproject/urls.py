@@ -27,9 +27,11 @@ urlpatterns = [
     path('questionpaper/', questionpaper, name="questionpaper"),
     # path('evaluator2/', evaluator2, name="evaluator2"),
     # path('evaluator1/', evaluator1, name="evaluator1"),
-    path('process/', process, name="process"),
+    # path('process/', process, name="process"),
     path('thankyou/', thankyou, name="thankyou"),
     # path('selectsubject/', selectsubject, name="selectsubject"),
     path('eval1/', eval1, name="eval1"),
     path('eval3/', eval3, name="eval3"),
+    path('update/', update, name="update"),
+
 ]

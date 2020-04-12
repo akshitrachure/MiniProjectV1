@@ -101,16 +101,19 @@ function display1(r,k,l)
             }                    
             else if(i==1)
             {
+                //b.setAttribute("placeholder",data2[l-1]['fields'].b);
                 b.setAttribute("value",0);
                 b.setAttribute("max",ques[l-1]['fields'].b);
             }                    
             else if(i==2)
             {
+                //b.setAttribute("placeholder",data2[l-1]['fields'].c);
                 b.setAttribute("value",0);
                 b.setAttribute("max",ques[l-1]['fields'].c);
             }                    
             else
             {
+               // b.setAttribute("placeholder",data2[l-1]['fields'].d);  
                 b.setAttribute("value",0);
                 b.setAttribute("max",ques[l-1]['fields'].d);
             }                    
@@ -127,10 +130,12 @@ function display1(r,k,l)
                 w.setAttribute("type","number")
                 w.setAttribute("name","Total"+(k))
                 w.setAttribute("class","form-control")
+               // w.setAttribute("class","col-xs-1")
                 w.setAttribute("maxlength","2")
                 w.setAttribute("max","20")
                 w.setAttribute("tabindex","-1")
                 w.setAttribute("onfocus","this.blur()")
+                //w.setAttribute("placeholder","Total"+(k))
                 w.setAttribute("value",0);
                 w.setAttribute("readonly","true")
                 tot.appendChild(w)
@@ -286,8 +291,8 @@ function getTotal()
     <center>
     <div class="container">
         <form method="POST">            
-            {%  csrf_token %}
-            <!-- <h2>Evaluator1</h2><br> -->
+            {%  csrf_token %}          
+            <h2>Update</h2><br>
             <label for="findeval">Who Are You ?</label>
             <select name="evaluator" id="evaluator">
                 <option value="Evaluator 1">Evaluator 1</option>
@@ -296,9 +301,9 @@ function getTotal()
             </select>
             <br><br>
             <label for="subcode" id="sbc" align="left">Subject Code:</label>
-            <input align="left" type="text" id="subcode" name="subcode" value="{{dat.sub_id}}" readonly>
+            <input align="left" type="text" id="subcode" name="subcode" value="{{dat1}}" readonly>
             <label align="left" for="sem" id="semid">Semester ID:</label>
-            <input align="left" type="text" id="sem" name="semester" value="{{dat.semester}}" readonly>
+            <input align="left" type="text" id="sem" name="semester" value="{{dat2}}" readonly>
             <label align="left" for="stuid" id="stu">Student ID:</label>
             <input align="left" type="text" id="stuid" name="studentId" value="{{g}}" readonly><br><br>
             <div class="form-group row">

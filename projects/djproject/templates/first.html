@@ -19,6 +19,17 @@
   </head>
   <body>
     <center>
+      {% if messages %} 
+            {% for message in messages %}
+            <center>
+                <!-- <div class="alert {% if message.tags %} alert-{{message.tags}}{% endif %}" role="alert"> -->
+                <div class="alert alert-primary" role="alert">
+                    <b><i>{{ message }}</i></b>
+                </div>
+            </center>
+           
+            {% endfor %}
+        {% endif %}
       <br /><br /><br />
       <div class="form-group">
         <h1>Exam Marks Management</h1>
